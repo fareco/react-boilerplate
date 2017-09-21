@@ -9,6 +9,7 @@ import reducer from './reducers'
 import App from './components/App';
 
 const middlewares = [thunkMiddleware]
+
 let store
 
 if (process.env.NODE_ENV === `development`) {
