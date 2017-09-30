@@ -1,7 +1,6 @@
 import React from 'react'
 
-function Post({item}) {
-  
+function Post({ item }) {
   return (
     <div>
       <a target="_blank" href={item.url}>{item.title}</a>

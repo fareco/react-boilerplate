@@ -9,6 +9,7 @@ import Home from './Home'
 import Counter from '../containers/Counter'
 import Reddit from '../containers/Reddit'
 import NoMatch from './NoMatch'
+import '../style/App.scss'
 
 const App = () => (
   <Router>
@@ -17,7 +18,7 @@ const App = () => (
         <li><Link to="/">首页</Link></li>
         <li><Link to="/counter">Counter</Link></li>
         <li><Link to="/reddit">Reddit</Link></li>
-        <li><Link to="/topics">主题列表</Link></li>
+        <li><Link to="/NoMatch">未匹配</Link></li>
       </ul>
 
       <hr />
@@ -26,7 +27,7 @@ const App = () => (
         <Route path="/counter" component={Counter} />
         <Route path="/reddit" component={Reddit} />
         <Route component={NoMatch} />
-      </Switch> 
+      </Switch>
     </div>
   </Router>
 )
