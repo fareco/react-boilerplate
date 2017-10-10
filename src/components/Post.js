@@ -1,11 +1,15 @@
 import React from 'react'
+import {
+  Link
+} from 'react-router-dom'
 
-function Post({item}) {
-  
+
+function Post({ item }) {
+
   return (
-    <div>
-      <a target="_blank" href={item.url}>{item.title}</a>
-    </div>
+      <div>
+        <Link to={`/detail/${item.title}`}>{item.title}</Link>
+      </div>
   )
 }
 
