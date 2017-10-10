@@ -12,6 +12,7 @@ import Home from './Home'
 import Counter from '../containers/Counter'
 import Reddit from '../containers/Reddit'
 import NoMatch from './NoMatch'
+import '../style/App.scss'
 
 
 class ScrollToTop extends React.Component {

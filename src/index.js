@@ -1,19 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import thunkMiddleware from 'redux-thunk'
-import { AppContainer } from 'react-hot-loader';
+import { AppContainer } from 'react-hot-loader'
 
 import reducer from './reducers'
-import App from './components/App';
+import App from './components/App'
 
 const middlewares = [thunkMiddleware]
 
 let store
 
-if (process.env.NODE_ENV === `development`) {
-  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+if (process.env.NODE_ENV === 'development') {
+  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
   store = createStore(reducer, /* preloadedState, */ composeEnhancers(
     applyMiddleware(...middlewares)
   ))
@@ -21,8 +21,7 @@ if (process.env.NODE_ENV === `development`) {
   store = createStore(reducer, applyMiddleware(...middlewares))
 }
 
-
-let render = app => {
+const render = () => {
   ReactDOM.render(
     <AppContainer>
       <Provider store={store}>
@@ -35,10 +34,10 @@ let render = app => {
 
 render(App)
 
-/*热更新*/
+/* 热更新 */
 if (module.hot) {
   module.hot.accept('./components/App', () => {
-    const NextApp = require('./components/App').default;
+    const NextApp = require('./components/App').default
     render(NextApp)
   })
 }

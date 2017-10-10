@@ -9,7 +9,11 @@
  *    IE on Windows Phone and in iOS.
  */
 
+<<<<<<< HEAD
  html {
+=======
+html {
+>>>>>>> b0aa1a136a0beb31b1813429e61960e55aa329e9
   line-height: 1.15; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */

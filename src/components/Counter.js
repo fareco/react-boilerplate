@@ -1,17 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-const Counter = ({ counter, decrement, increment, reset, history }) => {
-  return (
-    <div>
-      <h1>counter : {counter.count} </h1>
-      <button onClick={() => increment()}>+</button>
-      <button onClick={() => decrement()}>-</button>
-      <button onClick={() => reset()}>reset</button>
-    </div>
-  )
-}
-
-
+const Counter = ({ counter, decrement, increment, reset }) => (
+  <div>
+    <h1>counter : {counter.count} </h1>
+    <button onClick={() => increment()}>+</button>
+    <button onClick={() => decrement()}>-</button>
+    <button onClick={() => reset()}>reset</button>
+  </div>
+)
 
 
 //  class Counter extends Component {
@@ -27,5 +23,4 @@ const Counter = ({ counter, decrement, increment, reset, history }) => {
 //   }
 // }
 export default Counter
-
 

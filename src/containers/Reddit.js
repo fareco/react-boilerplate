@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchPosts } from '../actions';
+import { fetchPosts } from '../actions'
 
 import Post from '../components/Post'
 
@@ -10,7 +10,7 @@ const Reddit = ({ isFetching, posts, getPost }) => (
     <button onClick={() => getPost()} >get post</button>
     <div>
       {
-        posts.map((item) => (<Post key={item.id} item={item}/>))
+        posts.map(item => (<Post key={item.id} item={item} />))
       }
     </div>
 
@@ -21,17 +21,15 @@ const Reddit = ({ isFetching, posts, getPost }) => (
 const mapStateToProps = (state) => {
   const { isFetching, posts } = state.reddit
   return {
-    isFetching: isFetching,
-    posts: posts
+    isFetching,
+    posts
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    getPost: () => {
-      dispatch(fetchPosts())
-    }
+const mapDispatchToProps = dispatch => ({
+  getPost: () => {
+    dispatch(fetchPosts())
   }
-}
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Reddit)
