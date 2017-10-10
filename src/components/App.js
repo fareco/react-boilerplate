@@ -12,7 +12,6 @@ import Home from './Home'
 import Counter from '../containers/Counter'
 import Reddit from '../containers/Reddit'
 import NoMatch from './NoMatch'
-import '../style/App.scss'
 
 
 class ScrollToTop extends React.Component {
@@ -27,11 +26,17 @@ class ScrollToTop extends React.Component {
   }
 }
 
-ScrollToTop = withRouter(ScrollToTop)
+const Detail = ({ match, history }) => (
+  <button onClick={history.goBack} >
+    detail of {match.params.title}
+  </button>
+)
+
+const Scroll = withRouter(ScrollToTop)
 
 const App = () => (
   <Router>
-    <ScrollToTop>
+    <Scroll>
       <div>
         <ul>
           <li><Link to="/">首页</Link></li>
@@ -49,14 +54,8 @@ const App = () => (
           <Route component={NoMatch} />
         </Switch>
       </div>
-    </ScrollToTop>
+    </Scroll>
   </Router>
-)
-
-let Detail = ({ match,history }) => (
-  <div onClick={history.goBack}>
-    detail of {match.params.title}
-  </div>
 )
 
 
