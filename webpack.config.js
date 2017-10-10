@@ -19,7 +19,13 @@ commonConfig = {
   module: {
     rules: [{
       test: /\.js|jsx$/,
-      use: ['babel-loader?cacheDirectory', 'eslint-loader?fix'],
+      use: ['babel-loader?cacheDirectory', {
+        loader: 'eslint-loader',
+        options: {
+          fix:true,
+          formatter: require('eslint-friendly-formatter')
+        }
+      }],
       include: path.join(__dirname, 'src')
     }, {
       test: /\.css$/,
