@@ -1,28 +1,28 @@
-import React from 'react'
+import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
   Link,
   Switch,
   withRouter
-} from 'react-router-dom'
-import '../style/normalize.css'
-import '../style/App.scss'
-import Home from './Home'
-import Counter from '../containers/Counter'
-import Reddit from '../containers/Reddit'
-import NoMatch from './NoMatch'
+} from 'react-router-dom';
+import '../style/normalize.css';
+import '../style/App.scss';
+import Home from './Home';
+import Counter from '../containers/Counter';
+import Reddit from '../containers/Reddit';
+import NoMatch from './NoMatch';
 
 
 class ScrollToTop extends React.Component {
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {
-      window.scrollTo(0, 0)
+      window.scrollTo(0, 0);
     }
   }
 
   render() {
-    return this.props.children
+    return this.props.children;
   }
 }
 
@@ -30,9 +30,9 @@ const Detail = ({ match, history }) => (
   <button onClick={history.goBack} >
     detail of {match.params.title}
   </button>
-)
+);
 
-const Scroll = withRouter(ScrollToTop)
+const Scroll = withRouter(ScrollToTop);
 
 const App = () => (
   <Router>
@@ -56,7 +56,7 @@ const App = () => (
       </div>
     </Scroll>
   </Router>
-)
+);
 
 
-export default App
+export default App;

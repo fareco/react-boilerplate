@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import {
   Link
-} from 'react-router-dom'
+} from 'react-router-dom';
 
 
 function Post({ item }) {
@@ -9,7 +9,7 @@ function Post({ item }) {
     <div>
       <Link to={`/detail/${item.title}`}>{item.title}</Link>
     </div>
-  )
+  );
 }
 
-export default Post
+export default Post;

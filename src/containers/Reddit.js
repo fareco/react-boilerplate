@@ -1,8 +1,8 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { fetchPosts } from '../actions'
+import React from 'react';
+import { connect } from 'react-redux';
+import { fetchPosts } from '../actions';
 
-import Post from '../components/Post'
+import Post from '../components/Post';
 
 const Reddit = ({ isFetching, posts, getPost }) => (
   <div>
@@ -15,21 +15,21 @@ const Reddit = ({ isFetching, posts, getPost }) => (
     </div>
 
   </div>
-)
+);
 
 
 const mapStateToProps = (state) => {
-  const { isFetching, posts } = state.reddit
+  const { isFetching, posts } = state.reddit;
   return {
     isFetching,
     posts
-  }
-}
+  };
+};
 
 const mapDispatchToProps = dispatch => ({
   getPost: () => {
-    dispatch(fetchPosts())
+    dispatch(fetchPosts());
   }
-})
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(Reddit)
+export default connect(mapStateToProps, mapDispatchToProps)(Reddit);

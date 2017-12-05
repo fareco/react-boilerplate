@@ -1,21 +1,21 @@
-import { connect } from 'react-redux'
-import Counter from '../components/Counter'
-import { increment, decrement, reset } from '../actions'
+import { connect } from 'react-redux';
+import Counter from '../components/Counter';
+import { increment, decrement, reset } from '../actions';
 
 const mapStateToProps = state => ({
   counter: state.counter
-})
+});
 
 const mapDispatchToProps = dispatch => ({
   increment: () => {
-    dispatch(increment())
+    dispatch(increment());
   },
   decrement: () => {
-    dispatch(decrement())
+    dispatch(decrement());
   },
   reset: () => {
-    dispatch(reset())
+    dispatch(reset());
   }
-})
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter)
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);

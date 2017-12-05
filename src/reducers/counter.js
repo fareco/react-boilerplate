@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, RESET } from '../actions'
+import { INCREMENT, DECREMENT, RESET } from '../actions';
 
 
 export default function reducer(state = { count: 10 }, action) {
@@ -6,14 +6,14 @@ export default function reducer(state = { count: 10 }, action) {
     case INCREMENT:
       return {
         count: state.count + 1
-      }
+      };
     case DECREMENT:
       return {
         count: state.count - 1
-      }
+      };
     case RESET:
-      return { count: 0 }
+      return { count: 0 };
     default:
-      return state
+      return state;
   }
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Counter = ({ counter, decrement, increment, reset }) => (
   <div>
@@ -7,7 +7,7 @@ const Counter = ({ counter, decrement, increment, reset }) => (
     <button onClick={() => decrement()}>-</button>
     <button onClick={() => reset()}>reset</button>
   </div>
-)
+);
 
 
 //  class Counter extends Component {
@@ -22,5 +22,5 @@ const Counter = ({ counter, decrement, increment, reset }) => (
 //     )
 //   }
 // }
-export default Counter
+export default Counter;
 
